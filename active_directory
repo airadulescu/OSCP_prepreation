@@ -1,1 +1,14 @@
+Local user & Group enumeration 
+
+echo %USERNAME% || whoami   : cmd
+$env:username  : powershell
+whoami /priv  : PS & cmd : to see all the access that a user has in an AD.
+woami /groups : PS & cmd 
+net user : PS & cmd  : to see all tha users in the account.
+whoami /all :PS & cmd  : to list all the users and sercies for different users and group.
+Get-LocalUser |ft Name.Enables.LastLogon  : PS 
+Get-Children C:\Users -Force |select Name :PS
+net accounts : cmd
+
+
 
