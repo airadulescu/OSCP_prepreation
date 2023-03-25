@@ -1,1 +1,5 @@
 port 111
+
+rpcclient --user="" --command=enumprivs -N 10.10.10.10
+rpcinfo –p 10.10.10.10
+rpcbind -p 10.10.10.10
