@@ -4,6 +4,12 @@ anonymous login check
     ftp <ip address>
     username : anonymous
     pwd : anonymous
+        
+        FTP Commands for enum::
+        ? : Help
+        
+   
+   
   
 file upload 
     put shell.php
