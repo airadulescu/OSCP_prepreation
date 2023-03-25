@@ -1,1 +1,9 @@
 Port 21
+
+anonymous login check 
+    ftp <ip address>
+    username : anonymous
+    pwd : anonymous
+  
+file upload 
+    put shell.php
