@@ -1,1 +1,7 @@
 port 25
+
+
+connect : telnet <IP> 25
+
+userenum:
+  smtp-user-enum -M VRFY -U users.txt -t 10.0.0.1
