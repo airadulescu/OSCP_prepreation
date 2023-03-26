@@ -1,14 +1,56 @@
 Local user & Group enumeration 
 
-echo %USERNAME% || whoami   : cmd
-$env:username  : powershell
-whoami /priv  : PS & cmd : to see all the access that a user has in an AD.
-woami /groups : PS & cmd 
-net user : PS & cmd  : to see all tha users in the account.
-whoami /all :PS & cmd  : to list all the users and sercies for different users and group.
-Get-LocalUser |ft Name.Enables.LastLogon  : PS 
-Get-Children C:\Users -Force |select Name :PS
-net accounts : cmd
+  echo %USERNAME% || whoami   : cmd
+  $env:username  : powershell
+  whoami /priv  : PS & cmd : to see all the access that a user has in an AD.
+  woami /groups : PS & cmd 
+  net user : PS & cmd  : to see all tha users in the account.
+  whoami /all :PS & cmd  : to list all the users and sercies for different users and group.
+  Get-LocalUser |ft Name.Enables.LastLogon  : PS 
+  Get-Children C:\Users -Force |select Name :PS
+  net accounts : cmd
+  net accounts : PS
+  net user administrator : cmd
+  net user %USERNAME% :PS & cmd
+  net localgroup : PS & cmd
+  Get-LocalGroup : PS
+  net localgroup administrators :cmd
+  Get-LocalGroupMember Administrators :PS
+  Get-LocalGroupMember administrators :PS
+  
+  
+Network enumeration 
+  ipconfig /all
+  Get-NetIPConfiguration 
+  Get-DnsClientServerAddress -AddressFaminly IPv4
+  nslookup <IP>
+  route print
+  Get-NetRoute
+  arp -A
+  Get-Neighbour
+  netstat -ano
+  netsh firewall show state
+  netsh firewall show config
+  $f=New-object -comObject HNetCfg.FwPolicy2:$f.rules |where {$_.action -eq "0"} |select name.applicationname.localports  :::to see blocked ports by firewall
+  netsh firewall set opmode disable
+  netsh advfirewall set allprofiles state off
+  
+  
+AntiVirus Detection
+  Get-MpComputerstatus
+  netsh advfirewall show domain
+  netsh advfirewall show public
+  netsh advfirewall show private
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
 
 
 
