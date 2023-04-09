@@ -1,0 +1,11 @@
+
+#combining password and shadow file
+  unshadow /root/Documents/Unshadowed/passwd /root/Documents/Unshadowed/shadow > unshadow.txt
+  
+ #cracking passwords:
+  john unshadow.txt
+  
+  #cracking windows password:
+    john --format=md5 /root/Desktop/MD5hash --wordlist=/root/Desktop/MD5Crack
+  
+  
