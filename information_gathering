@@ -1,4 +1,12 @@
 information gathering:
+
+  Passive information gathering:
+  Whois
+  googlehacking
+  nertcraft
+  opensource code: GitHub, GitHub Gist, GitLab, and SourceForge.
+  tools automating source code search: Gitrob and Gitleaks.
+  
 nmap 
 dnsrecon
 nslookup
