@@ -7,7 +7,26 @@ information gathering:
   opensource code: GitHub, GitHub Gist, GitLab, and SourceForge.
   tools automating source code search: Gitrob and Gitleaks.
   
-nmap 
-dnsrecon
-nslookup
-dig
+  DNS enumeration
+    >NS : name server
+    >A Record: IPv4 address of host
+    >AAA Record : IPV6 address of host
+    >MX Record: Mail exchange server records
+    >PTR : Pointer records, used in reverse lookup zones and can find record associated with an IP address.
+    >CNAME: Canonical name record used to create alises for other hosts.
+    >TXT: contains any arbitarary data.
+    
+    >>host domain.com : to check the IP address of the host
+    >>host -t mx domain.com
+    >>host -t txt domain.com
+   
+    
+    >script to brutefor the subdomain:
+    >>for ip in $(cat list.txt); do host $ip.domain.com; done |grep -v "not found"
+    
+    >>dnsrecon OR dnsenum 
+    >>
+    
+  
+
+
