@@ -1,0 +1,18 @@
+ buffer is a memory area intended to hold content that is often sent by the user for later processing. Some buffers have a dynamic size, while others have a fixed, preallocated size.
+ 
+ 
+ how a buffer over flow exploit works:
+ The general flow of a standard stack-based buffer overflow is fairly straightforward. The exploit will:
+
+    Create a large buffer to trigger the overflow.
+    Take control of EIP by overwriting a return address on the stack, padding the large buffer with an appropriate offset.
+    Include a chosen payload in the buffer prepended by an optional NOP5 sled.
+    Choose a correct return address instruction such as JMP ESP (or a different register) to redirect the execution flow to the payload.
+
+
+
+Cross Compiling the Exploit code:
+    sudo apt install mingw-w64
+    i686-w64-mingw32-gcc <exploit>.c -o <crosscompiled>.exe
+
+
