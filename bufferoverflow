@@ -14,6 +14,7 @@
 Cross Compiling the Exploit code:
     sudo apt install mingw-w64
     i686-w64-mingw32-gcc <exploit>.c -o <crosscompiled>.exe
+    can run exploit using wine
     
     
 fixing the exploits:
