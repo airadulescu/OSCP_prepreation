@@ -28,5 +28,12 @@ information gathering:
     >>
     
   
-
+Scanning 
+  sudo iptables -I INPUT 1 -s 192.168.50.149 -j ACCEPT  :
+  :-I option to insert a new rule into a given chain, which in this case includes both the INPUT (Inbound) and OUTPUT (Outbound) chains, followed by the rule number. We can use -s to specify a source IP address, -d to specify a destination IP address, and -j to ACCEPT the  traffic. Finally, we'll use the -Z option to zero the packet and byte counters in all chains.
+  
+  
+  
+  
+  
 
