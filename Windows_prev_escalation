@@ -80,6 +80,15 @@ windows inforamtion gathering :
 to check installed application :
 Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" | select displayname 
 
+Getting details of all installed software ::
+Get-ChildItem "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall"
+foreach($obj in $InstalledSoftware){write-host $obj.GetValue('DisplayName') -NoNewline; write-host " - " -NoNewline; write-host $obj.GetValue('DisplayVersion')}
+
+
+Getting Details of the software installed for the current user:
+Get-ChildItem "HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall"
+foreach($obj in $InstalledSoftware){write-host $obj.GetValue('DisplayName') -NoNewline; write-host " - " -NoNewline; write-host $obj.GetValue('DisplayVersion')}
+
 
 
 
