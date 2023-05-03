@@ -1,1 +1,11 @@
+NFS :
+
+showmount -e <IP>
+sudo mount -t nfs <IP>:/share/location/  ~/mount/point/ -o noclock 
+
+add user using below commands: 
+sudo useradd <username>
+sudo usermod u <userID>
+
+
 
