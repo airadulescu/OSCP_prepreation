@@ -1,0 +1,3 @@
+For Microsoft IIS version 7 and above, if file upload is possible, there is a way to execute .asp code by modifying and uploading web.config file that is present in the root directory.
+
+web.config defines how the website will behave. It is possible to modify it, and modify the functioning of the server, from customer error response to allowing viewing additional files remotely.
